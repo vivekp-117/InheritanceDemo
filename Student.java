@@ -1,26 +1,14 @@
 import java.util.Date;
 
-public class Student {
-    private String firstName;
-    private String lastName;
-    private Date DOB;
+public class Student extends Person{
+    
     private double GPA;
     private int YOG;
 
-    public Student(String firstName, String lastName, Date DOB, double GPA, int YOG) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.DOB = DOB;
+    public Student(String firstName, String lastName, Date DOB, String hairColor, double GPA, int YOG) {
+        super(firstName, lastName, DOB, hairColor);
         this.GPA = GPA;
         this.YOG = YOG;
-    }
-
-    public String getName() {
-        return firstName + " " + lastName;
-    }
-
-    public Date getDOB() {
-        return DOB;
     }
 
     public double getGPA() {
@@ -31,7 +19,5 @@ public class Student {
         return YOG;
     }
     
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+    
 }
